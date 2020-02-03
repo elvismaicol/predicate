@@ -29,10 +29,16 @@ public class Product {
         this.price = price;
     }
     
+    //Metodo estático
     public static boolean staticProductPredicate(Product p) {
         return p.getPrice() >= 100.0;
     }
-
+    
+    //Metodo não estático
+    public boolean nonStaticProductPredicate() {
+        return price >= 100.0;
+    }
+    
     @Override
     public String toString() {
         return name + ", " + String.format("%.2f", price);
